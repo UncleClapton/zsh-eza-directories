@@ -2,8 +2,8 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
-if [[ -z "$EXA_TREE_IGNORE" ]]; then
-  EXA_TREE_IGNORE=".cache|cache|node_modules|vendor"
+if [[ -z "$EZA_TREE_IGNORE" ]]; then
+  EZA_TREE_IGNORE=".cache|cache|node_modules|vendor"
 fi
 
 alias -g ...='../..'
@@ -34,12 +34,12 @@ function d () {
 compdef _dirs d
 
 
-alias ls='exa --git --group-directories-first'
+alias ls='eza --git --group-directories-first'
 alias ll='ls -l'
 alias la='ls -la'
 
 # Thanks to https://dev.to/rawkode/tip-5-replacing-ls-with-exa-3o5n for this excellent idea
-alias lt='ls --tree -L 2 -I ${EXA_TREE_IGNORE}'
-alias ltt='ls --tree -L 3 -I ${EXA_TREE_IGNORE}'
-alias lttt='ls --tree -L 4 -I ${EXA_TREE_IGNORE}'
-alias ltttt='ls --tree -L 5 -I ${EXA_TREE_IGNORE}'
+alias lt='ls --tree -L 2 -I ${EZA_TREE_IGNORE}'
+alias ltt='ls --tree -L 3 -I ${EZA_TREE_IGNORE}'
+alias lttt='ls --tree -L 4 -I ${EZA_TREE_IGNORE}'
+alias ltttt='ls --tree -L 5 -I ${EZA_TREE_IGNORE}'
